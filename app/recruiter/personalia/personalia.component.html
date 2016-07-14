@@ -1,0 +1,80 @@
+<div *ngIf="personalia" class="personalia-container">
+  <div class="personalia-profile">
+    <div class="personalia-photo">
+      <img src="images/self.jpg" alt="Esra Hofstede">
+    </div>
+    <div class="personalia-information">
+      <div class="personalia-greeting">
+        <p>
+          Hallo
+        </p>
+      </div>
+      <div class="personalia-heading">
+        <h1><span>Ik ben</span> {{personalia.name}} </h1>
+        <h2>Software Engineer en Web Developer</h2>
+      </div>
+      <ul class="personalia-list">
+        <li>
+          <p class="personalia-attribute">Leeftijd</p>
+          <p class="personalia-value">{{personalia.age}}</p>
+        </li>
+        <li>
+          <p class="personalia-attribute">Stad</p>
+          <p class="personalia-value">{{personalia.city}}</p>
+        </li>
+        <li>
+          <p class="personalia-attribute">E-mail</p>
+          <p class="personalia-value">{{personalia.email}}</p>
+        </li>
+        <li>
+          <p class="personalia-attribute">Huidige werkgever</p>
+          <p class="personalia-value">{{personalia.currentEmployer}}</p>
+        </li>
+        <li>
+          <p class="personalia-attribute">Op vakantie</p>
+          <p class="personalia-value">{{personalia.holiday}}</p>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+  <div class="personalia-social">
+    <ul>
+      <li>
+        <a href="https://plus.google.com/u/0/116185884624356764579">
+          <span class="icon-google-plus"></span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.facebook.com/esra.hofstede">
+          <span class="icon-facebook"></span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/esrahofstede/">
+          <span class="icon-instagram"></span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/esrahofstede">
+          <span class="icon-linkedin2"></span>
+        </a>
+      </li>
+      <li>
+        <a href="https://twitter.com/Esra__H">
+          <span class="icon-twitter"></span>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/esrahofstede">
+          <span class="icon-github"></span>
+        </a>
+      </li>
+      <li>
+        <a href="http://stackoverflow.com/users/4562390/esra">
+          <span class="icon-stackoverflow"></span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

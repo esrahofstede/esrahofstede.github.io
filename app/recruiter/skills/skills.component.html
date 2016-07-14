@@ -1,0 +1,56 @@
+<div *ngIf="skills" class="skills-container">
+  <div class="skills-heading">
+    <h1>
+      Skills
+    </h1>
+  </div>
+  <div class="skills-content">
+    <div class="skills-programming">
+      <h2> Programming languages</h2>
+      <div *ngFor="#skill of skills.ProgrammingLanguages; #i=index" class="skill">
+          <h4>{{skill.name}}</h4>
+          <div class="progress">
+              <div class="progress-bar" [style.width] = "getWidth(i, 'ProgrammingLanguages')" ></div>
+          </div>
+      </div>
+    </div>
+    <div class="skills-certificaten">
+      <h2>
+        Certificaten
+      </h2>
+      <div *ngFor="#certificate of skills.Certificaten; #k=index" class="certificate">
+          <h4>{{certificate.name}}</h4>
+          <p class="certificate-location">{{certificate.date}} / {{certificate.place}}</p>
+          <p class="certificate-description"> {{certificate.description}}</p>
+      </div>
+    </div>
+    <div class="skills-frameworks">
+      <h2> Frameworks</h2>
+      <div *ngFor="#skill of skills.Frameworks; #j=index" class="skill">
+          <h4>{{skill.name}}</h4>
+          <div class="progress">
+              <div class="progress-bar" [style.width] = "getWidth(j, 'Frameworks')" ></div>
+          </div>
+      </div>
+    </div>
+    
+    <div class="skills-talen">
+      <h2> Talen </h2>
+      <div *ngFor="#skill of skills.SpeakingLanguages; #l=index" class="col-1-4">
+          <h4>{{skill.name}}</h4>
+          <div class="card">
+            <div class="donut-chart chart1">
+              <div class="slice one"></div>
+              <div class="slice two"></div>
+              <div class="chart-center">
+                <span></span>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+
+    
+  </div>
+</div>

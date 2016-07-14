@@ -1,0 +1,24 @@
+<div *ngIf="personalia">
+  <div class="heading">
+    <h1><span>Ik ben</span> {{personalia.name}} </h1>
+    <h2>Software engineer</h2>
+  </div>
+  <ul class="personalia-list">
+    <li>
+      <p>Leeftijd</p>
+      <p>{{personalia.age}}</p>
+    </li>
+    <li>
+      <p>Stad</p>
+      <p>{{personalia.city}}</p>
+    </li>
+    <li>
+      <p>E-mail</p>
+      <p>{{personalia.email}}</p>
+    </li>
+    <li>
+      <p>Op vakantie</p>
+      <p>Onbekend</p>
+    </li>
+  </ul>
+</div>

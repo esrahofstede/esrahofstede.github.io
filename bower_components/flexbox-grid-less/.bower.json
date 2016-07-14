@@ -1,0 +1,42 @@
+{
+  "name": "flexbox-grid-less",
+  "version": "4.0.0",
+  "description": "A simple flexbox CSS grid system",
+  "main": "less/flexbox-grid.less",
+  "authors": [
+    "Vivid Websolutions <info@vivid-websolutions.nl>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "vivid",
+    "websolutions",
+    "flexbox",
+    "grid",
+    "less",
+    "bem",
+    "responsive",
+    "liquid",
+    "css",
+    "framework",
+    "skeleton",
+    "front-end",
+    "frontend"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "homepage": "https://github.com/vivid-web/flexbox-grid-less",
+  "_release": "4.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "4.0.0",
+    "commit": "a446d243f780a6d1738fd955df0e9614c23b273a"
+  },
+  "_source": "https://github.com/vivid-web/flexbox-grid-less.git",
+  "_target": "4.0.0",
+  "_originalSource": "flexbox-grid-less"
+}

@@ -1,0 +1,226 @@
+/* ------------------------*/ /* ---------->>> Table of contents <<<-----------*/ /* ------------------------*/
+/*
+1. Global
+2. Tags
+3. Container
+4. Profile
+5. Photo
+6. Information
+7. Greeting
+8. Heading
+9. List
+10.Social
+*/
+
+/* ------------------------*/ /* ---------->>> 1. Global <<<-----------*/ /* ------------------------*/
+
+@font-face {
+    font-family: 'icomoon';
+    src:    url('fonts/icomoon.eot?y1d4e9');
+    src:    url('fonts/icomoon.eot?y1d4e9#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?y1d4e9') format('truetype'),
+        url('fonts/icomoon.woff?y1d4e9') format('woff'),
+        url('fonts/icomoon.svg?y1d4e9#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ------------------------*/ /* ---------->>> 2. Tags <<<-----------*/ /* ------------------------*/
+
+p{
+  font-family: "Open Sans", sans-serif;
+}
+
+/* ------------------------*/ /* ---------->>> 3. Container <<<-----------*/ /* ------------------------*/
+
+.personalia-container{
+  background-color: white;
+  z-index: 2;
+  position: relative;
+  max-width: 960px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ------------------------*/ /* ---------->>> 4. Profile <<<-----------*/ /* ------------------------*/
+
+.personalia-profile{
+  display: flex;
+  flex-direction: row;  
+  padding: 50px 50px 0 40px;
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+
+
+/* ------------------------*/ /* ---------->>> 5. Photo <<<-----------*/ /* ------------------------*/
+
+.personalia-photo {
+  flex-grow: 1;
+  margin-left: 30px;
+  justify-content: center;
+  
+}
+
+.personalia-photo > img {
+  margin: 0 auto;
+  height: 350px;
+  width: auto;
+}
+
+/* ------------------------*/ /* ---------->>> 6. Information <<<-----------*/ /* ------------------------*/
+.personalia-information {
+  flex-grow: 2;
+}
+
+/* ------------------------*/ /* ---------->>> 7. Greeting <<<-----------*/ /* ------------------------*/
+
+.personalia-greeting {
+  background-color: #0F283E;
+  margin-bottom: 20px;
+  width: 70px;
+}
+
+.personalia-greeting p {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.1;
+    display: inline-block;
+    padding: 7px 12px;
+    text-transform: uppercase;
+    position: relative; 
+}
+
+.personalia-greeting > p:before{
+    content: '';
+    width: 0;
+    height: 0;
+    top: 100%;
+    left: 5px;
+    display: block;
+    position: absolute;
+    border-style: solid;
+    border-width: 0 0 8px 8px;
+    border-color: transparent;
+    border-left-color: #0F283E;
+}
+
+/* ------------------------*/ /* ---------->>> 8. Heading <<<-----------*/ /* ------------------------*/
+
+.personalia-heading {
+  font-family: "Open Sans", sans-serif;
+  padding-bottom: 50px;
+  margin: 30px 0 20px 0;
+  border-bottom: 1px solid #dedede;
+}
+
+.personalia-heading > h1 {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #3D4437;
+  margin-bottom: 6px; 
+}
+ 
+.personalia-heading > h2 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.personalia-heading > h1 > span {
+  font-weight: 300;
+}
+
+/* ------------------------*/ /* ---------->>> 9. List <<<-----------*/ /* ------------------------*/
+
+.personalia-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.personalia-list > li {
+  display: flex;
+  flex-direction: row;
+}
+
+.personalia-list > li > .personalia-attribute {
+  font-weight: 700;
+  width: 180px;
+  margin-bottom: 18px;
+}
+
+.personalia-list > li > .personalia-value {
+  color: #9da0a7;
+  flex-grow: 2;
+}
+
+/* ------------------------*/ /* ---------->>> 10. Social <<<-----------*/ /* ------------------------*/
+
+.personalia-social{
+  background-color: #0F283E;
+  padding: 10px;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-google-plus:before {
+    content: "\ea8b";
+}
+.icon-facebook:before {
+    content: "\ea90";
+}
+.icon-instagram:before {
+    content: "\ea92";
+}
+.icon-twitter:before {
+    content: "\ea96";
+}
+.icon-github:before {
+    content: "\eab0";
+}
+.icon-linkedin2:before {
+    content: "\eaca";
+}
+.icon-stackoverflow:before {
+    content: "\ead0";
+}
+
+
+.personalia-social > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  
+}
+
+.personalia-social > ul > li {
+  margin: 0 30px;
+}
+
+.personalia-social > ul > li > a {
+  padding: 7px 9px;
+  color: white;
+  font-size: 25px;
+  line-height: 47px;
+  text-decoration: none;
+  border-radius: 50%; 
+}
+
+.personalia-social > ul > li > a:hover {
+  text-decoration: none;
+  background-color: rgb(0, 173, 238);
+}
