@@ -1,8 +1,7 @@
-import { Component, OnInit } from 'angular2/core';
-import { Router } from 'angular2/router';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
-import { Skill } from './../../shared/skill';
-import { Skills } from './../../shared/skill';
+import { Skill, Skills, Certificaat } from './../../shared/skill';
 import { SkillsService } from './../../shared/skills.service';
 
 @Component({

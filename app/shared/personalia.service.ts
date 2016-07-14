@@ -1,17 +1,27 @@
-import { Injectable } from 'angular2/core';
+import { Injectable } from '@angular/core';
+import { Headers, Http } from '@angular/http';
+
+import 'rxjs/add/operator/toPromise';
 
 import { Personalia } from './personalia';
 import { PersonBasicInformation } from './mock-personalia';
 
+
 @Injectable()
 export class PersonaliaService {
-  getPersonalia() {
-    return Promise.resolve(PersonBasicInformation);
+  private personaliaUrl = 'app/personalia';  // URL to web api
+
+  constructor(private http: Http) { }
+
+  getPersonalia(): Promise<Personalia> {
+    return this.http.get(this.personaliaUrl)
+               .toPromise()
+               .then(response => response.json().data)
+               .catch(this.handleError);
   }
 
-  getPersonaliaSlowly() {
-    return new Promise<Personalia>(resolve =>
-      setTimeout(()=>resolve(PersonBasicInformation), 2000) // 2 seconds
-    );
+  private handleError(error: any) {
+    console.error('An error occurred', error);
+    return Promise.reject(error.message || error);
   }
 }

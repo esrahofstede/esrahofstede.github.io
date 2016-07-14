@@ -1,5 +1,5 @@
-import { Component } from 'angular2/core';
-import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
+import { Component } from '@angular/core';
+import { ROUTER_DIRECTIVES } from '@angular/router';
 
 import { PersonaliaService } from './../shared/personalia.service';
 
@@ -14,7 +14,6 @@ import { PersonaliaService } from './../shared/personalia.service';
   styleUrls: ['app/app.component.css'],
   directives: [ROUTER_DIRECTIVES],
   providers: [
-    ROUTER_PROVIDERS,
     PersonaliaService
   ]
 })

@@ -1,4 +1,4 @@
-import { Injectable } from 'angular2/core';
+import { Injectable } from '@angular/core';
 
 import { Skill } from './skill';
 import { Skills } from './skill';

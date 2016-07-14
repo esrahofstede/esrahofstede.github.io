@@ -1,10 +1,7 @@
-import { Component } from 'angular2/core';
-import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
-import { Router } from 'angular2/router';
+import { Component } from '@angular/core';
+import { Router, ROUTER_DIRECTIVES } from '@angular/router';
 
 import { PersonaliaService } from './../shared/personalia.service';
-// import { PersonaliaComponent } from './personalia/personalia.component';
-
 
 @Component({
   selector: 'selector',
