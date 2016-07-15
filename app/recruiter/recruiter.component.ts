@@ -9,7 +9,7 @@ import { SkillsComponent } from './skills/skills.component';
 @Component({
   selector: 'my-app',
   templateUrl: 'app/recruiter/recruiter.component.html',
-  styleUrls: ['app/reset.css', 'app/recruiter/recruiter.component.css'],
+  styleUrls: ['css/reset.css', 'app/recruiter/recruiter.component.css'],
   directives: [ROUTER_DIRECTIVES, PersonaliaComponent, PitchComponent, SkillsComponent]
 })
 export class RecruiterComponent { 

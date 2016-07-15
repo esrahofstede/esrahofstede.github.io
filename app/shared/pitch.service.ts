@@ -1,17 +1,25 @@
 import { Injectable } from '@angular/core';
+import { Headers, Http } from '@angular/http';
+
+import 'rxjs/add/operator/toPromise';
 
 import { Pitch } from './pitch';
-import { ElevatorPitch } from './mock-pitch';
 
 @Injectable()
 export class PitchService {
+  private pitchUrl = 'app/pitch';  // URL to web api
+
+  constructor(private http: Http) { }
+
   getPitch() {
-    return Promise.resolve(ElevatorPitch);
+    return this.http.get(this.pitchUrl)
+               .toPromise()
+               .then(response => response.json().data)
+               .catch(this.handleError);
   }
 
-  getPitchSlowly() {
-    return new Promise<Pitch>(resolve =>
-      setTimeout(()=>resolve(ElevatorPitch), 2000) // 2 seconds
-    );
+  private handleError(error: any) {
+    console.error('An error occurred', error);
+    return Promise.reject(error.message || error);
   }
 }

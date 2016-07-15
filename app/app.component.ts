@@ -10,7 +10,7 @@ import { SelectorComponent } from './selector/selector.component';
   selector: 'my-app',
   directives: [ROUTER_DIRECTIVES],
   template: '<div class="container"><router-outlet></router-outlet></div>',
-  styleUrls: ['app/reset.css'],
+  styleUrls: ['css/reset.css'],
   providers: []
 })
 export class AppComponent {

@@ -8,38 +8,71 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var router_1 = require('@angular/router');
-var skills_service_1 = require('./../../shared/skills.service');
-var SkillsComponent = (function () {
-    function SkillsComponent(_router, _skillsService) {
+const core_1 = require('@angular/core');
+const router_1 = require('@angular/router');
+const skills_service_1 = require('./../../shared/skills.service');
+let SkillsComponent = class SkillsComponent {
+    constructor(_router, _skillsService) {
         this._router = _router;
         this._skillsService = _skillsService;
+        this.languagesView = {
+            radius: 40,
+            strokewidth: 20,
+            strokedasharray: function () {
+                return this.radius * 2 * 3.14;
+            },
+            strokedashoffset: function (percentage) {
+                return 251.2 - 251.2 * percentage / 100;
+            }
+        };
+        this.straal = 40;
     }
-    SkillsComponent.prototype.getWidth = function (i, skillType) {
+    getWidth(i, skillType) {
         var indicator = this.skills[skillType][i].indication;
         return indicator + "0%";
-    };
-    SkillsComponent.prototype.getSkills = function () {
-        var _this = this;
-        this._skillsService.getSkills().then(function (skills) { return _this.setSkills(skills); });
-    };
-    SkillsComponent.prototype.setSkills = function (skills) {
+    }
+    getSkills() {
+        this._skillsService.getSkills().then(skills => this.setSkills(skills));
+    }
+    setLanguageView() {
+        this.languagesView = {
+            radius: 40,
+            strokewidth: 20,
+            strokedasharray: function () {
+                return this.radius * 2 * 3.14;
+            },
+            strokedashoffset: function (percentage) {
+                return 251.2 - 251.2 * percentage / 100;
+            }
+        };
+    }
+    setSkills(skills) {
         this.skills = skills;
-    };
-    SkillsComponent.prototype.ngOnInit = function () {
+    }
+    ngOnInit() {
         this.getSkills();
-    };
-    SkillsComponent = __decorate([
-        core_1.Component({
-            selector: 'skills',
-            templateUrl: 'app/recruiter/skills/skills.component.html',
-            styleUrls: ['app/recruiter/skills/skills.component.css'],
-            providers: [skills_service_1.SkillsService]
-        }), 
-        __metadata('design:paramtypes', [router_1.Router, skills_service_1.SkillsService])
-    ], SkillsComponent);
-    return SkillsComponent;
-}());
+    }
+};
+SkillsComponent = __decorate([
+    core_1.Component({
+        selector: 'skills',
+        templateUrl: 'app/recruiter/skills/skills.component.html',
+        styleUrls: ['app/recruiter/skills/skills.component.css'],
+        providers: [skills_service_1.SkillsService]
+    }), 
+    __metadata('design:paramtypes', [router_1.Router, skills_service_1.SkillsService])
+], SkillsComponent);
 exports.SkillsComponent = SkillsComponent;
+let LanguagesView = {
+    radius: 40,
+    strokewidth: 20,
+    strokedasharray: function () {
+        return this.radius * 2 * 3.14;
+    },
+    strokedashoffset: function (percentage) {
+        return 251.2 - 251.2 * percentage / 100;
+    }
+};
+class LanguageSVG {
+}
 //# sourceMappingURL=skills.component.js.map

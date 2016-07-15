@@ -4,8 +4,6 @@ import { Headers, Http } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
 import { Personalia } from './personalia';
-import { PersonBasicInformation } from './mock-personalia';
-
 
 @Injectable()
 export class PersonaliaService {

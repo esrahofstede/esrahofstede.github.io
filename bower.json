@@ -10,6 +10,7 @@
     "bootstrap": "~3.3.1",
     "respond-minmax": "~1.4.2",
     "jquery-validation-unobtrusive": "~3.2.2",
-    "flexbox-grid-less": "4.0.0"
+    "flexbox-grid-less": "4.0.0",
+    "easy-pie-chart": "latest"
   }
 }

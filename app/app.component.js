@@ -8,23 +8,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var router_1 = require('@angular/router');
-var AppComponent = (function () {
-    function AppComponent() {
+const core_1 = require('@angular/core');
+const router_1 = require('@angular/router');
+let AppComponent = class AppComponent {
+    constructor() {
         this.title = 'Website van Esra Hofstede';
     }
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'my-app',
-            directives: [router_1.ROUTER_DIRECTIVES],
-            template: '<div class="container"><router-outlet></router-outlet></div>',
-            styleUrls: ['app/reset.css'],
-            providers: []
-        }), 
-        __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
-}());
+};
+AppComponent = __decorate([
+    core_1.Component({
+        selector: 'my-app',
+        directives: [router_1.ROUTER_DIRECTIVES],
+        template: '<div class="container"><router-outlet></router-outlet></div>',
+        styleUrls: ['css/reset.css'],
+        providers: []
+    }), 
+    __metadata('design:paramtypes', [])
+], AppComponent);
 exports.AppComponent = AppComponent;
 //# sourceMappingURL=app.component.js.map

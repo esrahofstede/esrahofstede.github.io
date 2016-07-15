@@ -12,19 +12,19 @@ const routes: RouterConfig = [
         pathMatch: 'full'
     },
     {
-        path: '/selector',
+        path: 'selector',
         component: SelectorComponent,
     },
     {
-        path: '/recruiter',
+        path: 'recruiter',
         component: RecruiterComponent
     },
     {
-        path: '/programmer',
+        path: 'programmer',
         component: ProgrammerComponent
     },
     {
-        path: '/someone',
+        path: 'someone',
         component: SomeoneComponent
     }
 ];

@@ -14,11 +14,11 @@ export class SelectorComponent {
       private _router: Router) { }
 
   gotoRecruiter() {
-    this._router.navigate(['Recruiter']);
+    this._router.navigate(['recruiter']);
   }
 
   gotoProgrammer() {
-    this._router.navigate(['Programmer']);
+    this._router.navigate(['programmer']);
   }
 
 }

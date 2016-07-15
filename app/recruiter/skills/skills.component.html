@@ -7,7 +7,7 @@
   <div class="skills-content">
     <div class="skills-programming">
       <h2> Programming languages</h2>
-      <div *ngFor="#skill of skills.ProgrammingLanguages; #i=index" class="skill">
+      <div *ngFor="let skill of skills.ProgrammingLanguages; let i=index" class="skill">
           <h4>{{skill.name}}</h4>
           <div class="progress">
               <div class="progress-bar" [style.width] = "getWidth(i, 'ProgrammingLanguages')" ></div>
@@ -18,7 +18,7 @@
       <h2>
         Certificaten
       </h2>
-      <div *ngFor="#certificate of skills.Certificaten; #k=index" class="certificate">
+      <div *ngFor="let certificate of skills.Certificaten; let k=index" class="certificate">
           <h4>{{certificate.name}}</h4>
           <p class="certificate-location">{{certificate.date}} / {{certificate.place}}</p>
           <p class="certificate-description"> {{certificate.description}}</p>
@@ -26,31 +26,26 @@
     </div>
     <div class="skills-frameworks">
       <h2> Frameworks</h2>
-      <div *ngFor="#skill of skills.Frameworks; #j=index" class="skill">
+      <div *ngFor="let skill of skills.Frameworks; let j=index" class="skill">
           <h4>{{skill.name}}</h4>
           <div class="progress">
               <div class="progress-bar" [style.width] = "getWidth(j, 'Frameworks')" ></div>
           </div>
       </div>
     </div>
-    
-    <div class="skills-talen">
+    <div class="skills-languages-container">
       <h2> Talen </h2>
-      <div *ngFor="#skill of skills.SpeakingLanguages; #l=index" class="col-1-4">
+      <div class="skills-languages">
+        <div *ngFor="let skill of skills.SpeakingLanguages; let l=index" class="skills-language">
           <h4>{{skill.name}}</h4>
-          <div class="card">
-            <div class="donut-chart chart1">
-              <div class="slice one"></div>
-              <div class="slice two"></div>
-              <div class="chart-center">
-                <span></span>
-              </div>
-            </div>
-          </div>
+          <svg width="100%" height="100%" viewbox="0 0 100 100">
+            <circle cx="50" cy="50" [attr.r]="languagesView.radius" fill="transparent"/>
+            <circle cx="50" cy="50" [attr.r]="languagesView.radius" fill="transparent" [attr.stroke-width]="languagesView.strokewidth" stroke="grey"/>
+            <circle cx="50" cy="50" [attr.r]="languagesView.radius" fill="transparent" [attr.stroke-width]="languagesView.strokewidth" stroke="#00CCFF" [attr.stroke-dasharray]="languagesView.radius * 2 * 3.14" [attr.stroke-dashoffset]="251.2 - 251.2 * (skill.indication * 10) / 100"/>
+            <text x="40" y="50" fill="black" font-size="10">Text</text>
+          </svg>
+        </div>
       </div>
     </div>
-
-
-    
   </div>
 </div>

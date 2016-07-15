@@ -8,25 +8,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var router_1 = require('@angular/router');
-var personalia_service_1 = require('./../shared/personalia.service');
-var SomeoneComponent = (function () {
-    function SomeoneComponent() {
-    }
-    SomeoneComponent = __decorate([
-        core_1.Component({
-            selector: 'someone',
-            template: "\n    <p>voor router van recruiter</p>\n    <router-outlet></router-outlet>\n    <p>na router van recruiter</p>\n  ",
-            styleUrls: ['app/app.component.css'],
-            directives: [router_1.ROUTER_DIRECTIVES],
-            providers: [
-                personalia_service_1.PersonaliaService
-            ]
-        }), 
-        __metadata('design:paramtypes', [])
-    ], SomeoneComponent);
-    return SomeoneComponent;
-}());
+const core_1 = require('@angular/core');
+const router_1 = require('@angular/router');
+const personalia_service_1 = require('./../shared/personalia.service');
+let SomeoneComponent = class SomeoneComponent {
+};
+SomeoneComponent = __decorate([
+    core_1.Component({
+        selector: 'someone',
+        template: `
+    <p>voor router van recruiter</p>
+    <router-outlet></router-outlet>
+    <p>na router van recruiter</p>
+  `,
+        styleUrls: ['app/app.component.css'],
+        directives: [router_1.ROUTER_DIRECTIVES],
+        providers: [
+            personalia_service_1.PersonaliaService
+        ]
+    }), 
+    __metadata('design:paramtypes', [])
+], SomeoneComponent);
 exports.SomeoneComponent = SomeoneComponent;
 //# sourceMappingURL=someone.component.js.map

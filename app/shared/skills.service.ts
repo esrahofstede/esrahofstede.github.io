@@ -1,18 +1,26 @@
 import { Injectable } from '@angular/core';
+import { Headers, Http } from '@angular/http';
+
+import 'rxjs/add/operator/toPromise';
 
 import { Skill } from './skill';
 import { Skills } from './skill';
-import { MySkills } from './mock-skills';
 
 @Injectable()
 export class SkillsService {
+  private skillsUrl = 'app/skills';  // URL to web api
+
+  constructor(private http: Http) { }
+
   getSkills() {
-    return Promise.resolve(MySkills);
+    return this.http.get(this.skillsUrl)
+               .toPromise()
+               .then(response => response.json().data)
+               .catch(this.handleError);
   }
 
-  getSkillsSlowly() {
-    return new Promise<Skills>(resolve =>
-      setTimeout(()=>resolve(MySkills), 2000) // 2 seconds
-    );
+  private handleError(error: any) {
+    console.error('An error occurred', error);
+    return Promise.reject(error.message || error);
   }
 }
