@@ -1,10 +1,10 @@
 "use strict";
-const router_1 = require('@angular/router');
-const selector_component_1 = require('./selector/selector.component');
-const recruiter_component_1 = require('./recruiter/recruiter.component');
-const programmer_component_1 = require('./programmer/programmer.component');
-const someone_component_1 = require('./someone/someone.component');
-const routes = [
+var router_1 = require('@angular/router');
+var selector_component_1 = require('./selector/selector.component');
+var recruiter_component_1 = require('./recruiter/recruiter.component');
+var programmer_component_1 = require('./programmer/programmer.component');
+var someone_component_1 = require('./someone/someone.component');
+var routes = [
     {
         path: '',
         redirectTo: '/selector',

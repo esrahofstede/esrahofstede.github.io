@@ -13,16 +13,10 @@ import { SkillsService } from './../../shared/skills.service';
 export class SkillsComponent {
   skills: Skills;  
   languagesView: LanguageSVG = {
-      radius: 40,
-      strokewidth: 20,
-      strokedasharray: function () {
-        return this.radius * 2 * 3.14;
-      },
-      strokedashoffset : function (percentage: number) {
-          return 251.2 - 251.2 * percentage / 100;
-        }
-    };
-  straal = 40;
+    radius: 80,
+    strokewidth: 10,
+    strokedasharray: 80 * 2 * 3.14 //radius * perimeter of circle
+  };
 
   constructor(
     private _router: Router,
@@ -38,19 +32,6 @@ export class SkillsComponent {
     this._skillsService.getSkills().then(skills => this.setSkills(skills));
   }
 
-  setLanguageView(){
-    this.languagesView = {
-      radius: 40,
-      strokewidth: 20,
-      strokedasharray: function () {
-        return this.radius * 2 * 3.14;
-      },
-      strokedashoffset : function (percentage: number) {
-          return 251.2 - 251.2 * percentage / 100;
-        }
-    };
-  }
-
   setSkills(skills: Skills){
     this.skills = skills;
   }
@@ -60,22 +41,10 @@ export class SkillsComponent {
   }
 }
 
-let LanguagesView : LanguageSVG = {
-  radius: 40,
-  strokewidth: 20,
-  strokedasharray: function () {
-    return this.radius * 2 * 3.14;
-  },
-  strokedashoffset : function (percentage: number) {
-    return 251.2 - 251.2 * percentage / 100;
-  }
-};
-
 class LanguageSVG {
   radius: number;
   strokewidth: number;
-  strokedasharray: Function;
-  strokedashoffset: Function;
+  strokedasharray: number;
 }
 
 

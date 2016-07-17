@@ -8,22 +8,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-const core_1 = require('@angular/core');
-const router_1 = require('@angular/router');
-const personalia_component_1 = require('./personalia/personalia.component');
-let ProgrammerComponent = class ProgrammerComponent {
-    constructor() {
+var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
+var personalia_component_1 = require('./personalia/personalia.component');
+var ProgrammerComponent = (function () {
+    function ProgrammerComponent() {
         this.title = 'Website van Esra Hofstede';
     }
-};
-ProgrammerComponent = __decorate([
-    core_1.Component({
-        selector: 'programmer',
-        templateUrl: "app/programmer/programmer.component.html",
-        styleUrls: ['app/app.component.css'],
-        directives: [router_1.ROUTER_DIRECTIVES, personalia_component_1.PersonaliaComponent]
-    }), 
-    __metadata('design:paramtypes', [])
-], ProgrammerComponent);
+    ProgrammerComponent = __decorate([
+        core_1.Component({
+            selector: 'programmer',
+            templateUrl: "app/programmer/programmer.component.html",
+            styleUrls: ['app/app.component.css'],
+            directives: [router_1.ROUTER_DIRECTIVES, personalia_component_1.PersonaliaComponent]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], ProgrammerComponent);
+    return ProgrammerComponent;
+}());
 exports.ProgrammerComponent = ProgrammerComponent;
 //# sourceMappingURL=programmer.component.js.map

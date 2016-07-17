@@ -1,11 +1,20 @@
 "use strict";
-class Skills {
-}
+var Skills = (function () {
+    function Skills() {
+    }
+    return Skills;
+}());
 exports.Skills = Skills;
-class Skill {
-}
+var Skill = (function () {
+    function Skill() {
+    }
+    return Skill;
+}());
 exports.Skill = Skill;
-class Certificaat {
-}
+var Certificaat = (function () {
+    function Certificaat() {
+    }
+    return Certificaat;
+}());
 exports.Certificaat = Certificaat;
 //# sourceMappingURL=skill.js.map

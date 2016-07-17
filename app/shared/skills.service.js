@@ -8,28 +8,29 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-const core_1 = require('@angular/core');
-const http_1 = require('@angular/http');
+var core_1 = require('@angular/core');
+var http_1 = require('@angular/http');
 require('rxjs/add/operator/toPromise');
-let SkillsService = class SkillsService {
-    constructor(http) {
+var SkillsService = (function () {
+    function SkillsService(http) {
         this.http = http;
         this.skillsUrl = 'app/skills'; // URL to web api
     }
-    getSkills() {
+    SkillsService.prototype.getSkills = function () {
         return this.http.get(this.skillsUrl)
             .toPromise()
-            .then(response => response.json().data)
+            .then(function (response) { return response.json().data; })
             .catch(this.handleError);
-    }
-    handleError(error) {
+    };
+    SkillsService.prototype.handleError = function (error) {
         console.error('An error occurred', error);
         return Promise.reject(error.message || error);
-    }
-};
-SkillsService = __decorate([
-    core_1.Injectable(), 
-    __metadata('design:paramtypes', [http_1.Http])
-], SkillsService);
+    };
+    SkillsService = __decorate([
+        core_1.Injectable(), 
+        __metadata('design:paramtypes', [http_1.Http])
+    ], SkillsService);
+    return SkillsService;
+}());
 exports.SkillsService = SkillsService;
 //# sourceMappingURL=skills.service.js.map

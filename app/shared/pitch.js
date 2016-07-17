@@ -1,5 +1,8 @@
 "use strict";
-class Pitch {
-}
+var Pitch = (function () {
+    function Pitch() {
+    }
+    return Pitch;
+}());
 exports.Pitch = Pitch;
 //# sourceMappingURL=pitch.js.map

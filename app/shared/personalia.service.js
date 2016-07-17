@@ -8,28 +8,29 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-const core_1 = require('@angular/core');
-const http_1 = require('@angular/http');
+var core_1 = require('@angular/core');
+var http_1 = require('@angular/http');
 require('rxjs/add/operator/toPromise');
-let PersonaliaService = class PersonaliaService {
-    constructor(http) {
+var PersonaliaService = (function () {
+    function PersonaliaService(http) {
         this.http = http;
         this.personaliaUrl = 'app/personalia'; // URL to web api
     }
-    getPersonalia() {
+    PersonaliaService.prototype.getPersonalia = function () {
         return this.http.get(this.personaliaUrl)
             .toPromise()
-            .then(response => response.json().data)
+            .then(function (response) { return response.json().data; })
             .catch(this.handleError);
-    }
-    handleError(error) {
+    };
+    PersonaliaService.prototype.handleError = function (error) {
         console.error('An error occurred', error);
         return Promise.reject(error.message || error);
-    }
-};
-PersonaliaService = __decorate([
-    core_1.Injectable(), 
-    __metadata('design:paramtypes', [http_1.Http])
-], PersonaliaService);
+    };
+    PersonaliaService = __decorate([
+        core_1.Injectable(), 
+        __metadata('design:paramtypes', [http_1.Http])
+    ], PersonaliaService);
+    return PersonaliaService;
+}());
 exports.PersonaliaService = PersonaliaService;
 //# sourceMappingURL=personalia.service.js.map

@@ -70,7 +70,7 @@ export class InMemoryDataService {
               indication: 8
           },
           {
-              name: "WPF",
+              name: "WCF",
               indication: 8
           },
           {
@@ -90,11 +90,11 @@ export class InMemoryDataService {
           },
           {
               name: "Engels",
-              indication: 8
+              indication: 7
           },
           {
               name: "Duits",
-              indication: 7
+              indication: 5
           }
       ],
       Personal: [
@@ -105,7 +105,27 @@ export class InMemoryDataService {
       ],
       Knowledge: [
           "Machine Learning",
-          "UML"
+          "UML",
+          "AzureML",
+          "D3",
+          "ERM",
+          "Scrum",
+          "RUP",
+          "FCO-IM",
+          "User Experience",
+          "LINQ",
+          "XML",
+          "SOAP",
+          "WebAPI",
+          "SO Architecture",
+          "ATDD",
+          "OOP",
+          "TDD",
+          "Azure",
+          "Automatic Build",
+          "Continuous Deployment",
+          "DevOps",
+          "Endeavour"
       ],
       Certificaten: [
           {
@@ -116,9 +136,9 @@ export class InMemoryDataService {
           },
           {
               name: "Microsoft Azure Machine Learning Training",
-              date: "???? 2016",
+              date: "22 februari 2016",
               place: "Veenendaal",
-              description: "In deze training leert u deze cloud service toe te passen. U leert hoe u de standaard bibliotheken met tijdbesparende voorbeeldexperimenten, R- en Python-pakketten en eersteklas algoritmen van Microsoft-ondernemingen als Xbox en Bing kunt gebruiken en hoe u eigen R- en Python-code kunt gebruiken." 
+              description: "In deze training heb ik geleerd om machine learning toe te passen door R- en Python-pakketten en eersteklas algoritmen van Microsoft-ondernemingen als Xbox en Bing kunt gebruiken en hoe u eigen R- en Python-code kunt gebruiken." 
           }
       ]
 

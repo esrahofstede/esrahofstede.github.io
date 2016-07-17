@@ -1,7 +1,9 @@
 "use strict";
-class InMemoryDataService {
-    createDb() {
-        let personalia = {
+var InMemoryDataService = (function () {
+    function InMemoryDataService() {
+    }
+    InMemoryDataService.prototype.createDb = function () {
+        var personalia = {
             name: "Esra Hofstede",
             age: 21,
             city: "Deventer",
@@ -9,12 +11,12 @@ class InMemoryDataService {
             currentEmployer: "Topicus",
             holiday: "tot en met 23 juli 2016"
         };
-        let pitch = {
+        var pitch = {
             single: "Esra Hofstede",
             full: "Mezelf omschrijf ik als een enthousiaste student die breed geïnteresseerd is en naast programmeren ook weet te communiceren en organiseren tussen verschillende afdelingen. Tijdens projecten omschrijven anderen mij als hardwekkend, goed in het plannen en vinden dat ik probeer om een duidelijke structuur in projecten te krijgen. Tijdens mijn opleiding heb ik mij in verschillende programmeertalen verdiept zoals C#, Java, Javascript en T-SQL. ",
             karaktereigenschappen: ["doorzetter"]
         };
-        let skills = {
+        var skills = {
             ProgrammingLanguages: [
                 {
                     name: "HTML",
@@ -69,7 +71,7 @@ class InMemoryDataService {
                     indication: 8
                 },
                 {
-                    name: "WPF",
+                    name: "WCF",
                     indication: 8
                 },
                 {
@@ -88,11 +90,11 @@ class InMemoryDataService {
                 },
                 {
                     name: "Engels",
-                    indication: 8
+                    indication: 7
                 },
                 {
                     name: "Duits",
-                    indication: 7
+                    indication: 5
                 }
             ],
             Personal: [
@@ -103,7 +105,27 @@ class InMemoryDataService {
             ],
             Knowledge: [
                 "Machine Learning",
-                "UML"
+                "UML",
+                "AzureML",
+                "D3",
+                "ERM",
+                "Scrum",
+                "RUP",
+                "FCO-IM",
+                "User Experience",
+                "LINQ",
+                "XML",
+                "SOAP",
+                "WebAPI",
+                "SO Architecture",
+                "ATDD",
+                "OOP",
+                "TDD",
+                "Azure",
+                "Automatic Build",
+                "Continuous Deployment",
+                "DevOps",
+                "Endeavour"
             ],
             Certificaten: [
                 {
@@ -114,14 +136,15 @@ class InMemoryDataService {
                 },
                 {
                     name: "Microsoft Azure Machine Learning Training",
-                    date: "???? 2016",
+                    date: "22 februari 2016",
                     place: "Veenendaal",
-                    description: "In deze training leert u deze cloud service toe te passen. U leert hoe u de standaard bibliotheken met tijdbesparende voorbeeldexperimenten, R- en Python-pakketten en eersteklas algoritmen van Microsoft-ondernemingen als Xbox en Bing kunt gebruiken en hoe u eigen R- en Python-code kunt gebruiken."
+                    description: "In deze training heb ik geleerd om machine learning toe te passen door R- en Python-pakketten en eersteklas algoritmen van Microsoft-ondernemingen als Xbox en Bing kunt gebruiken en hoe u eigen R- en Python-code kunt gebruiken."
                 }
             ]
         };
         return { personalia: personalia, pitch: pitch, skills: skills };
-    }
-}
+    };
+    return InMemoryDataService;
+}());
 exports.InMemoryDataService = InMemoryDataService;
 //# sourceMappingURL=in-memory-data.service.js.map

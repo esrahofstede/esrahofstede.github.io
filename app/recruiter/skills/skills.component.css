@@ -1,3 +1,5 @@
+/* ------------------------*/ /* ---------->>> 1. Global <<<-----------*/ /* ------------------------*/
+
 @font-face {
   font-family: 'BebasNeue';
   src: url('fonts/BebasNeue.otf'); /* IE9 Compat Modes */
@@ -6,65 +8,6 @@
        url('fonts/BebasNeue.otf') format('otf'), /* Pretty Modern Browsers */
        url('fonts/BebasNeue.otf')  format('truetype') /* Safari, Android, iOS */       
 }
-
-.skills-container{
-  z-index: 2;
-  position: relative;
-  max-width: 960px;
-  margin: 0 auto;
-  width: 100%;
-  background-color: white;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
-}
-
-.skills-heading {
-  width: 100%;
-  text-align: center;
-  font-size: 26px;
-  padding: 20px 0;
-}
-
-.skills-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: stretch;
-  margin: 0 20px;
-}
-.skills-programming{
-  flex-grow: 2;
-  margin: 0 10px;
-  min-width: 250px;
-}
-
-.skills-frameworks{
-  flex-grow: 2;
-  margin: 0 10px;
-  min-width: 250px;
-}
-
-.skills-certificaten {
-  flex-grow: 3; 
-  margin: 0 10px;
-  min-width: 300px;
-}
-
-.certificate-description {
-  max-width: 290px;
-  margin-bottom: 20px;
-}
-
-.skills-talen {
-  flex-grow: 3;
-  margin: 0 10px;
-}
-
-.certificate-location {
-  font-style: italic;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
 
 h1 {
   font-family: 'BebasNeue';
@@ -91,6 +34,51 @@ p {
   line-height: 1.5;
 }
 
+/* ------------------------*/ /* ---------->>> 1. Container <<<-----------*/ /* ------------------------*/
+
+.skills-container{
+  z-index: 2;
+  position: relative;
+  max-width: 960px;
+  margin: 0 auto;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+}
+
+/* ------------------------*/ /* ---------->>> 2. Heading <<<-----------*/ /* ------------------------*/
+
+.skills-heading {
+  width: 100%;
+  text-align: center;
+  font-size: 26px;
+  padding: 20px 0;
+}
+
+.skills-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+  margin: 0 20px;
+}
+
+/* ------------------------*/ /* ---------->>> 1. Skill met progressbar <<<-----------*/ /* ------------------------*/
+
+.skills-programming{
+  flex-grow: 1;
+  margin: 0 10px 10px 10px;
+  padding: 0 50px 0 50px;
+  min-width: 250px;
+}
+
+.skills-frameworks{
+  flex-grow: 1;
+  margin: 0 10px 10px 10px;
+  padding: 0 50px 0 50px;
+  min-width: 250px;
+}
+
 .progress {
   height: 8px;
   background-color: #f5f5f5;
@@ -104,7 +92,17 @@ p {
 }
 
 
-/* --------------- donut chart ----------------- */
+/* ------------------------*/ /* ---------->>> 1. Languages <<<-----------*/ /* ------------------------*/
+.skills-languages-container {
+  margin: 0 0 30px 0;
+}
+
+.skills-talen {
+  flex-grow: 3;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 30px;
+}
 
 .skills-languages-container > h2 {
   width: 100%
@@ -112,16 +110,16 @@ p {
 
 .skills-languages {
   display: flex;
-  margin: 0 20px; 
 }
 
 .skills-language {
-  flex-grow: 1;
+  flex-grow: 2;
+  margin: 0 30px;
 }
 
 .skills-language > svg {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
 }
 
 svg {
@@ -131,4 +129,58 @@ svg {
 
 text {
   transform: rotate(90deg);
+  font-family: 'Open Sans';
+  font-size: 16px;
+  margin-bottom: 15px;
+  line-height: 24px;
+}
+
+/* ------------------------*/ /* ---------->>> 1. Knowledge <<<-----------*/ /* ------------------------*/
+
+.skills-knowledge-container {
+  flex: 1;
+  padding: 0 10px; 
+  margin: 0 50px;
+}
+
+.skills-knowledge {
+  column-count: 2;
+  -webkit-column-gap: 50px; /* Chrome, Safari, Opera */
+  -moz-column-gap: 50px; /* Firefox */
+  column-gap: 2px;
+  min-width: 400px;
+}
+
+.skills-knowledge > p {
+  font-family: 'Open Sans';
+  font-size: 16px;  
+  line-height: 1.3;
+}
+
+.vinkje {
+  color: lawngreen;
+}
+
+/* ------------------------*/ /* ---------->>> 1. Certificaten <<<-----------*/ /* ------------------------*/
+
+.certificate > h4 {
+  margin-bottom: 5px;
+}
+
+.certificate-location {
+  font-style: italic;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.skills-certificaten {
+  flex-grow: 3; 
+  margin-left: 10px;
+  margin-right: 10px;
+  min-width: 300px;
+}
+
+.certificate-description {
+  max-width: 290px;
+  margin-bottom: 5px;
 }

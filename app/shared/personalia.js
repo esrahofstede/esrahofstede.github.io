@@ -1,5 +1,8 @@
 "use strict";
-class Personalia {
-}
+var Personalia = (function () {
+    function Personalia() {
+    }
+    return Personalia;
+}());
 exports.Personalia = Personalia;
 //# sourceMappingURL=personalia.js.map

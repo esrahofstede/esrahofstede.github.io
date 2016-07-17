@@ -8,32 +8,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-const core_1 = require('@angular/core');
-const router_1 = require('@angular/router');
-const pitch_service_1 = require('./../../shared/pitch.service');
-let PitchComponent = class PitchComponent {
-    constructor(_router, _pitchService) {
+var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
+var pitch_service_1 = require('./../../shared/pitch.service');
+var PitchComponent = (function () {
+    function PitchComponent(_router, _pitchService) {
         this._router = _router;
         this._pitchService = _pitchService;
     }
-    getPitch() {
-        this._pitchService.getPitch().then(pitch => this.setPitch(pitch));
-    }
-    setPitch(pitch) {
+    PitchComponent.prototype.getPitch = function () {
+        var _this = this;
+        this._pitchService.getPitch().then(function (pitch) { return _this.setPitch(pitch); });
+    };
+    PitchComponent.prototype.setPitch = function (pitch) {
         this.pitch = pitch;
-    }
-    ngOnInit() {
+    };
+    PitchComponent.prototype.ngOnInit = function () {
         this.getPitch();
-    }
-};
-PitchComponent = __decorate([
-    core_1.Component({
-        selector: 'pitch',
-        templateUrl: 'app/recruiter/pitch/pitch.component.html',
-        styleUrls: ['app/recruiter/pitch/pitch.component.css'],
-        providers: [pitch_service_1.PitchService]
-    }), 
-    __metadata('design:paramtypes', [router_1.Router, pitch_service_1.PitchService])
-], PitchComponent);
+    };
+    PitchComponent = __decorate([
+        core_1.Component({
+            selector: 'pitch',
+            templateUrl: 'app/recruiter/pitch/pitch.component.html',
+            styleUrls: ['app/recruiter/pitch/pitch.component.css'],
+            providers: [pitch_service_1.PitchService]
+        }), 
+        __metadata('design:paramtypes', [router_1.Router, pitch_service_1.PitchService])
+    ], PitchComponent);
+    return PitchComponent;
+}());
 exports.PitchComponent = PitchComponent;
 //# sourceMappingURL=pitch.component.js.map

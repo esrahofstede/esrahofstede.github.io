@@ -8,36 +8,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-const core_1 = require('@angular/core');
-const router_1 = require('@angular/router');
-const personalia_service_1 = require('./../../shared/personalia.service');
-let PersonaliaComponent = class PersonaliaComponent {
-    constructor(_router, _personaliaService) {
+var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
+var personalia_service_1 = require('./../../shared/personalia.service');
+var PersonaliaComponent = (function () {
+    function PersonaliaComponent(_router, _personaliaService) {
         this._router = _router;
         this._personaliaService = _personaliaService;
     }
-    getPersonalia() {
-        this._personaliaService.getPersonalia().then(personalia => this.setPersonalia(personalia));
-    }
-    setPersonalia(personalia) {
+    PersonaliaComponent.prototype.getPersonalia = function () {
+        var _this = this;
+        this._personaliaService.getPersonalia().then(function (personalia) { return _this.setPersonalia(personalia); });
+    };
+    PersonaliaComponent.prototype.setPersonalia = function (personalia) {
         this.personalia = personalia;
-    }
-    ngOnInit() {
+    };
+    PersonaliaComponent.prototype.ngOnInit = function () {
         this.getPersonalia();
-    }
-    onSelect(personalia) { this.personalia = personalia; }
-    gotoDetail() {
+    };
+    PersonaliaComponent.prototype.onSelect = function (personalia) { this.personalia = personalia; };
+    PersonaliaComponent.prototype.gotoDetail = function () {
         this._router.navigate(['HeroDetail', { id: this.personalia.name }]);
-    }
-};
-PersonaliaComponent = __decorate([
-    core_1.Component({
-        selector: 'personalia',
-        templateUrl: 'app/programmer/personalia/personalia.component.html',
-        styleUrls: ['app/programmer/personalia/personalia.component.css'],
-        providers: [personalia_service_1.PersonaliaService]
-    }), 
-    __metadata('design:paramtypes', [router_1.Router, personalia_service_1.PersonaliaService])
-], PersonaliaComponent);
+    };
+    PersonaliaComponent = __decorate([
+        core_1.Component({
+            selector: 'personalia',
+            templateUrl: 'app/programmer/personalia/personalia.component.html',
+            styleUrls: ['app/programmer/personalia/personalia.component.css'],
+            providers: [personalia_service_1.PersonaliaService]
+        }), 
+        __metadata('design:paramtypes', [router_1.Router, personalia_service_1.PersonaliaService])
+    ], PersonaliaComponent);
+    return PersonaliaComponent;
+}());
 exports.PersonaliaComponent = PersonaliaComponent;
 //# sourceMappingURL=personalia.component.js.map
