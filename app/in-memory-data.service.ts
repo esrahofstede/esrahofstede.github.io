@@ -1,7 +1,11 @@
+import { Portfolio } from './shared/portfolio';
+
 export class InMemoryDataService {
   createDb() {
     let personalia = {
         name: "Esra Hofstede",
+        title: "Bachelor of Information and Communication Technology",
+        jobTitle: "Software Engineer en Web Developer",
         age: 21,
         city: "Deventer",
         email: "info@esrahofstede.nl",
@@ -138,12 +142,142 @@ export class InMemoryDataService {
               name: "Microsoft Azure Machine Learning Training",
               date: "22 februari 2016",
               place: "Veenendaal",
-              description: "In deze training heb ik geleerd om machine learning toe te passen door R- en Python-pakketten en eersteklas algoritmen van Microsoft-ondernemingen als Xbox en Bing kunt gebruiken en hoe u eigen R- en Python-code kunt gebruiken." 
+              description: "In deze training heb ik geleerd om machine learning toe te passen om complexe vraagstukken op te lossen. Hiervoor werden R- en Python-pakketten, Spark en AzureML gebruikt." 
           }
       ]
 
     };
     
-    return {personalia, pitch, skills};
+    let workexperience = [
+        {
+            company: "Info Support",
+            jobTitle: "Afstudeerder",
+            jobDescription: "Als afstudeerproject heb ik onderzocht hoe veiligere API's gebouwd kunnen worden door validatie op data-integriteit toe te passen.",
+            started: "2016",
+            ended: "2016" 
+        },
+        {
+            company: "Topicus",
+            jobTitle: "Stagair",
+            jobDescription: "Tijdens mijn stage heb ik een visualisator gebouwd die processen uit een SQL-database visualiseert in de browser. Hiervoor zijn technieken als AngularJS 1.4, D3JS en Dagre gebruikt.",
+            started: "2015",
+            ended: "2015" 
+        },
+        {
+            company: "Wanno BV.",
+            jobTitle: "Webdeveloper en Serverbeheerder",
+            jobDescription: "Binnen Wanno BV. zijn meerdere websites ontwikkeld. Daarnaast zijn er meerdere servers in eigen beheer. Als webdeveloper en netwerkbeheerder worden nieuwe websites gerealiseerd en de servers onderhouden.",
+            started: "2014",
+            ended: "2014" 
+        },
+        {
+            company: "Buro302",
+            jobTitle: "PHP-developer",
+            jobDescription: "In januari 2014 begonnen bij Buro302, een studentenbedrijf wat ondere andere webdevelopment aanbied. Hier heb ik meegewerkt aan meerdere projecten.",
+            started: "2014",
+            ended: "2014" 
+        },
+        {
+            company: "Twence BV.",
+            jobTitle: "ICT- en Helpdeskmedewerker",
+            jobDescription: "Bij Twence ontstond de behoefte aan een tijdelijke medewerker voor het inrichten van een groot aantal nieuwe werkplekken. Na dit project werd ik ingezet voor meerdere opdrachten, waaronder het inrichten van een nieuw telefoonnetwerk, het documenteren van projecten en overzetten van documenten naar een nieuw document management systeem.",
+            started: "2013",
+            ended: "2014" 
+        },
+        {
+            company: "In's & Outs",
+            jobTitle: "Monteur Raamdecoratie",
+            jobDescription: "In vakanties meerdere projecten gedaan op het gebied van raamdecoratie. Deze projecten vonden plaats in heel Nederland. De meeste zonweringen werden gemonteerd in opdracht van B&C.",
+            started: "2012",
+            ended: "2012" 
+        },
+        {
+            company: "Reklamix",
+            jobTitle: "Bezorger",
+            jobDescription: "Tijdens de middelbare school begonnen met het bezorgen van huis-aan-huis bladen.",
+            started: "2008",
+            ended: "heden" 
+        },
+    ]
+
+    let portfolio: Portfolio = {
+        Projects: [
+            {
+                Name: "Stage",
+                Description: "Procesvisualisatie met HTML5",
+                Url: "none",
+                Customer: {
+                    Name: "Topicus",
+                    Url: "topicus.nl"
+                },
+                Employer: {
+                    Name: "Topicus",
+                    Url: "topicus.nl"
+                },
+                Image: ""
+            },
+            {
+                Name: "Afstuderen",
+                Description: "API's beter beveiligen door te valideren op data-integriteit met Machine Learning",
+                Url: "none",
+                Customer: {
+                    Name: "Info Support",
+                    Url: "InfoSupport.com"
+                },
+                Employer: {
+                    Name: "Info Support",
+                    Url: "InfoSupport.com"
+                },
+                Image: ""
+            }
+        ],
+        Websites: [
+            {
+                Name: "Tennis met Passie",
+                Description: "Website",
+                Url: "tennismetpassie.nl",
+                Customer: {
+                    Name: "Andre Mekers",
+                    Url: "none"
+                },
+                Employer: {
+                    Name: "Freelance",
+                    Url: "none"
+                },
+                Image: "https://c6.staticflickr.com/9/8572/28605118445_ab203c0aa7_b.jpg"
+            },
+            {
+                Name: "Klein Overmeen Bouwt",
+                Description: "Website",
+                Url: "kleinovermeenbouwt.nl",
+                Customer: {
+                    Name: "Niek Klein Overmeen",
+                    Url: "none"
+                },
+                Employer: {
+                    Name: "Freelance",
+                    Url: "none"
+                },
+                Image: "https://c3.staticflickr.com/9/8714/28572891146_28d1c16603_b.jpg"
+            },
+            {
+                Name: "Duurzamerwijs",
+                Description: "Website",
+                Url: "duurzamerwijs.nl",
+                Customer: {
+                    Name: "Innovatielab duurzaam bouwen",
+                    Url: "http://www.energieneutraalbouwen.nl/circulair/innovatielab-duurzaam-bouwen-2014/"
+                },
+                Employer: {
+                    Name: "Freelance",
+                    Url: "none"
+                },
+                Image: "https://c6.staticflickr.com/9/8406/27989193653_402b5f3ca6_b.jpg"
+            },
+            
+        ]
+    }         
+
+    return {personalia, pitch, skills, workexperience, portfolio};
   }
 }

@@ -1,0 +1,17 @@
+<div *ngIf="portfolio" class="portfolio-container">
+  portfolio
+  <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 200 }'>
+    <div class="grid-item">
+      {{portfolio.Websites[0].Image}}
+    </div>
+    <div class="grid-item"></div>
+  </div>
+</div>
+
+<script>
+  $('.grid').masonry({
+  // options...
+  itemSelector: '.grid-item',
+  columnWidth: 200
+  });  
+</script>

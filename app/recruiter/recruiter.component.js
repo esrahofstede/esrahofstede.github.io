@@ -13,6 +13,7 @@ var router_1 = require('@angular/router');
 var personalia_component_1 = require('./personalia/personalia.component');
 var pitch_component_1 = require('./pitch/pitch.component');
 var skills_component_1 = require('./skills/skills.component');
+var work_component_1 = require('./work/work.component');
 var RecruiterComponent = (function () {
     function RecruiterComponent() {
     }
@@ -21,7 +22,7 @@ var RecruiterComponent = (function () {
             selector: 'my-app',
             templateUrl: 'app/recruiter/recruiter.component.html',
             styleUrls: ['css/reset.css', 'app/recruiter/recruiter.component.css'],
-            directives: [router_1.ROUTER_DIRECTIVES, personalia_component_1.PersonaliaComponent, pitch_component_1.PitchComponent, skills_component_1.SkillsComponent]
+            directives: [router_1.ROUTER_DIRECTIVES, personalia_component_1.PersonaliaComponent, pitch_component_1.PitchComponent, skills_component_1.SkillsComponent, work_component_1.WorkComponent]
         }), 
         __metadata('design:paramtypes', [])
     ], RecruiterComponent);

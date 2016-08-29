@@ -11,6 +11,7 @@
     "respond-minmax": "~1.4.2",
     "jquery-validation-unobtrusive": "~3.2.2",
     "flexbox-grid-less": "4.0.0",
-    "easy-pie-chart": "latest"
+    "easy-pie-chart": "latest",
+    "masonry": "latest"
   }
 }

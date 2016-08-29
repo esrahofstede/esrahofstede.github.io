@@ -3,16 +3,16 @@ import { Headers, Http } from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
 
-import { Skill, Skills } from './skill';
+import { WorkExperience } from './workExperience';
 
 @Injectable()
-export class SkillsService {
-  private skillsUrl = 'app/skills';  // URL to web api
+export class WorkExperienceService {
+  private workExperienceUrl = 'app/workexperience';  // URL to web api
 
   constructor(private http: Http) { }
 
-  getSkills() {
-    return this.http.get(this.skillsUrl)
+  getWork() {
+    return this.http.get(this.workExperienceUrl)
                .toPromise()
                .then(response => response.json().data)
                .catch(this.handleError);
