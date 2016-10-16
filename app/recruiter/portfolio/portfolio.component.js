@@ -15,6 +15,9 @@ var PortfolioComponent = (function () {
     function PortfolioComponent(_router, _portfolioService) {
         this._router = _router;
         this._portfolioService = _portfolioService;
+        this.showWebsite = true;
+        this.showProject = true;
+        this.showAlles = true;
     }
     PortfolioComponent.prototype.getPortfolio = function () {
         var _this = this;
@@ -22,6 +25,29 @@ var PortfolioComponent = (function () {
     };
     PortfolioComponent.prototype.setPortfolio = function (portfolio) {
         this.portfolio = portfolio;
+    };
+    PortfolioComponent.prototype.activate = function (portfolioType) {
+        console.log(portfolioType);
+        if (portfolioType == "alles") {
+            console.log("alles == " + portfolioType);
+            this.showWebsite = true;
+            this.showProject = true;
+            this.showAlles = true;
+        }
+        else if (portfolioType == "website") {
+            console.log("website == " + portfolioType);
+            this.showWebsite = true;
+            this.showProject = false;
+            this.showAlles = false;
+        }
+        else {
+            console.log("else == " + portfolioType);
+            this.showProject = true;
+            this.showWebsite = false;
+            this.showAlles = false;
+        }
+        console.log("project: " + this.showProject);
+        console.log("website: " + this.showWebsite);
     };
     PortfolioComponent.prototype.ngOnInit = function () {
         this.getPortfolio();

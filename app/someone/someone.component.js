@@ -9,7 +9,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var router_1 = require('@angular/router');
 var personalia_service_1 = require('./../shared/personalia.service');
 var SomeoneComponent = (function () {
     function SomeoneComponent() {
@@ -19,7 +18,6 @@ var SomeoneComponent = (function () {
             selector: 'someone',
             template: "\n    <p>voor router van recruiter</p>\n    <router-outlet></router-outlet>\n    <p>na router van recruiter</p>\n  ",
             styleUrls: ['app/app.component.css'],
-            directives: [router_1.ROUTER_DIRECTIVES],
             providers: [
                 personalia_service_1.PersonaliaService
             ]

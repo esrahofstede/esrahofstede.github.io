@@ -9,7 +9,11 @@ export class Project {
   Url: string;
   Customer: Company;
   Employer: Company;
-  Image: string;
+  Image: {
+    Url: string;
+    widthRatio: number;
+    heightRatio: number;
+  }
 }
 
 export class Company {

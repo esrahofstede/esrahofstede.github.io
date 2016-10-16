@@ -2,14 +2,6 @@
 /*
 1. Global
 2. Tags
-3. Container
-4. Profile
-5. Photo
-6. Information
-7. Greeting
-8. Heading
-9. List
-10.Social
 */
 
 /* ------------------------*/ /* ---------->>> 1. Global <<<-----------*/ /* ------------------------*/
@@ -27,6 +19,110 @@
 
 /* ------------------------*/ /* ---------->>> 2. Tags <<<-----------*/ /* ------------------------*/
 
+h1 {
+  font-family: 'BebasNeue';
+  font-size: 38px;
+}
+
+h2 {
+  font-family: 'BebasNeue';
+  font-size: 24px;
+  margin-bottom: 15px;
+  line-height: 24px;
+}
+
+h4 {
+  font-family: 'Open Sans';
+  font-size: 16px;
+  margin-bottom: 15px;
+  line-height: 24px;
+}
+
+
 p{
   font-family: "Open Sans", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+/* force scrollbar */
+html { overflow-y: scroll; }
+
+body { font-family: sans-serif; }
+
+
+
+
+.portfolio-container{
+  z-index: 2;
+  position: relative;
+  max-width: 960px;
+  margin: 0 auto;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.portfolio-container > h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 38px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.portfolio-selector-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.portfolio-selector {
+  margin-bottom: 20px;  
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.portfolio-selector > a {
+  flex-grow: 1;
+  text-align: center;
+  min-width: 33%;
+  font-family: 'Open Sans';
+  font-size: 16px;
+  padding-bottom: 5px;
+  
+}
+
+
+.portfolio-selector > a:first-child {
+  text-align: left;
+  padding-left: 3px;
+}
+
+.portfolio-selector > a:hover {
+  padding-left: 3px;
+}
+
+.portfolio-selector > a:last-child {
+  text-align: right;
+  padding-right: 3px;
+}
+
+
+/* ---- grid ---- */
+.brick { 
+  overflow: hidden;
+}
+
+.projectImage {
+  width: 320px;
+  height: 210px;
+}
+
+.active-selector {
+  border-bottom: 5px blue solid;
+}
+
+.inactive-selector {
+  border-bottom: 5px lightgrey solid;
 }

@@ -1,0 +1,16 @@
+<div *ngIf="workExperiences" class="work-container">
+  <h2>Werkervaring</h2>
+  <div class="work-content">
+    <div class="timeline"></div>
+    <div class="workexperiences">
+      <div *ngFor="let workExperience of workExperiences; let i=index" class="workexperience">
+        <span class="timeline-mark"></span>
+        <div class="timeline-arrow"></div>
+        <h4>{{workExperience.started}} - {{workExperience.ended}}</h4>
+        <h3>{{workExperience.company}}</h3>
+        <h5>{{workExperience.jobTitle}}</h5>
+        <p>{{workExperience.jobDescription}}</p>
+      </div>
+    </div>
+  </div>
+</div>

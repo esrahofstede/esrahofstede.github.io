@@ -1,6 +1,7 @@
+import { InMemoryDbService } from 'angular\-in-memory-web-api';
 import { Portfolio } from './shared/portfolio';
 
-export class InMemoryDataService {
+export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     let personalia = {
         name: "Esra Hofstede",
@@ -214,7 +215,11 @@ export class InMemoryDataService {
                     Name: "Topicus",
                     Url: "topicus.nl"
                 },
-                Image: ""
+                Image: {
+                    Url: "https://c1.staticflickr.com/9/8555/29781698962_030ed5fc7e_o.png",
+                    widthRatio: 3,
+                    heightRatio: 2
+                }
             },
             {
                 Name: "Afstuderen",
@@ -228,7 +233,47 @@ export class InMemoryDataService {
                     Name: "Info Support",
                     Url: "InfoSupport.com"
                 },
-                Image: ""
+                Image: {
+                    Url: "https://c5.staticflickr.com/9/8175/29601382300_c8aabdf8e1_o.jpg",
+                    widthRatio: 2,
+                    heightRatio: 1
+                }
+            },
+            {
+                Name: "DDOA",
+                Description: "Confluence plugin maken",
+                Url: "none",
+                Customer: {
+                    Name: "Luminis",
+                    Url: "Luminis"
+                },
+                Employer: {
+                    Name: "HAN",
+                    Url: "HAN.nl"
+                },
+                Image: {
+                    Url : "https://c1.staticflickr.com/9/8068/29268155154_67ce58718e_o.png",
+                    heightRatio: 1,
+                    widthRatio: 1
+                }
+            },
+            {
+                Name: "CRIA",
+                Description: "Interactieve website maken",
+                Url: "none",
+                Customer: {
+                    Name: "Luminis",
+                    Url: "Luminis"
+                },
+                Employer: {
+                    Name: "HAN",
+                    Url: "HAN.nl"
+                },
+                Image: {
+                    Url: "https://c2.staticflickr.com/6/5534/29781698732_47ae16e207_o.png",
+                    heightRatio: 1,
+                    widthRatio: 1
+                }
             }
         ],
         Websites: [
@@ -244,7 +289,11 @@ export class InMemoryDataService {
                     Name: "Freelance",
                     Url: "none"
                 },
-                Image: "https://c6.staticflickr.com/9/8572/28605118445_ab203c0aa7_b.jpg"
+                Image: {
+                    Url: "https://c6.staticflickr.com/9/8572/28605118445_ab203c0aa7_b.jpg",
+                    heightRatio: 1,
+                    widthRatio: 1
+                }
             },
             {
                 Name: "Klein Overmeen Bouwt",
@@ -258,7 +307,11 @@ export class InMemoryDataService {
                     Name: "Freelance",
                     Url: "none"
                 },
-                Image: "https://c3.staticflickr.com/9/8714/28572891146_28d1c16603_b.jpg"
+                Image: {
+                    Url: "https://c3.staticflickr.com/9/8714/28572891146_28d1c16603_b.jpg",
+                    heightRatio: 1,
+                    widthRatio: 1
+                }
             },
             {
                 Name: "Duurzamerwijs",
@@ -269,12 +322,33 @@ export class InMemoryDataService {
                     Url: "http://www.energieneutraalbouwen.nl/circulair/innovatielab-duurzaam-bouwen-2014/"
                 },
                 Employer: {
+                    Name: "Buro302",
+                    Url: "none"
+                },
+                Image: {
+                    Url: "https://c6.staticflickr.com/9/8406/27989193653_402b5f3ca6_b.jpg",
+                    heightRatio: 1,
+                    widthRatio: 1
+                }
+            },
+            {
+                Name: "EsraHofstede",
+                Description: "Website",
+                Url: "esrahofstede.nl",
+                Customer: {
+                    Name: "Esra Hofstede",
+                    Url: "esrahofstede.nl"
+                },
+                Employer: {
                     Name: "Freelance",
                     Url: "none"
                 },
-                Image: "https://c6.staticflickr.com/9/8406/27989193653_402b5f3ca6_b.jpg"
+                Image: {
+                    Url: "https://c1.staticflickr.com/9/8713/29268155644_dfcd279891_o.png",
+                    heightRatio: 1,
+                    widthRatio: 1
+                }
             },
-            
         ]
     }         
 

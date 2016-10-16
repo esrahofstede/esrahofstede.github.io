@@ -1,17 +1,23 @@
 <div *ngIf="portfolio" class="portfolio-container">
-  portfolio
-  <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 200 }'>
-    <div class="grid-item">
-      {{portfolio.Websites[0].Image}}
+  <h2>Portfolio</h2>
+  <div class="portfolio-selector-container">
+    <div class="portfolio-selector">
+      <a (click)="activate('alles')" [class.active-selector]="showProject && showWebsite" [class.inactive-selector]="!showAlles">Alles</a>
+      <a (click)="activate('project')" [class.active-selector]="showProject && !showWebsite" [class.inactive-selector]="showAlles || showWebsite">Projecten </a>
+      <a (click)="activate('website')" [class.active-selector]="showWebsite && !showProject" [class.inactive-selector]="showAlles || showProject">Websites </a>
     </div>
-    <div class="grid-item"></div>
   </div>
-</div>
-
-<script>
-  $('.grid').masonry({
-  // options...
-  itemSelector: '.grid-item',
-  columnWidth: 200
-  });  
-</script>
+  <masonry>
+     <template [ngIf]="showWebsite">
+       <masonry-brick class="brick" *ngFor="let website of portfolio.Websites; let i=index">
+          <img src="{{website.Image.Url}}" class="projectImage">
+       </masonry-brick>
+     </template>
+     <template [ngIf]="showProject">
+       <masonry-brick class="brick" *ngFor="let project of portfolio.Projects; let i=index">
+        <img src="{{project.Image.Url}}" class="projectImage">
+      </masonry-brick>
+     </template >
+     
+  </masonry>
+</div>  

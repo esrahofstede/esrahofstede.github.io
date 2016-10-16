@@ -12,6 +12,7 @@
     "jquery-validation-unobtrusive": "~3.2.2",
     "flexbox-grid-less": "4.0.0",
     "easy-pie-chart": "latest",
-    "masonry": "latest"
+    "masonry": "latest",
+    "masonry-css": "latest"
   }
 }

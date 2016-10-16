@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ROUTER_DIRECTIVES } from '@angular/router';
 
 import { PersonaliaService } from './../shared/personalia.service';
 
@@ -12,7 +11,6 @@ import { PersonaliaService } from './../shared/personalia.service';
     <p>na router van recruiter</p>
   `,
   styleUrls: ['app/app.component.css'],
-  directives: [ROUTER_DIRECTIVES],
   providers: [
     PersonaliaService
   ]
