@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { WorkExperience } from './../../shared/workExperience';
-import { WorkExperienceService } from './../../shared/workExperience.service';
+import { WorkExperience } from '../../shared/workExperience';
+import { WorkExperienceService } from '../../shared/workExperience.service';
 
 @Component({
   selector: 'work',

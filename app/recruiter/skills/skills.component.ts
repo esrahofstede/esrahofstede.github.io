@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { Skill, Skills, Certificaat } from './../../shared/skill';
-import { SkillsService } from './../../shared/skills.service';
+import { Skill, Skills, Certificaat } from '../../shared/skill';
+import { SkillsService } from '../../shared/skills.service';
 
 @Component({
   selector: 'skills',

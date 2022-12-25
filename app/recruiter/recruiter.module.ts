@@ -7,10 +7,12 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { SkillsComponent } from './skills/skills.component';
 import { WorkComponent } from './work/work.component';
 import { MasonryModule } from 'angular2-masonry';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     imports: [CommonModule, MasonryModule],
     declarations: [
+        HttpClientModule,
         RecruiterComponent, 
         PersonaliaComponent, 
         PitchComponent,

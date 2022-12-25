@@ -5,7 +5,7 @@ import { SelectorComponent } from './selector/selector.component';
 
 @Component({
   selector: 'my-app',
-  template: '<div class="container"><router-outlet></router-outlet></div>',
+  ng-template: '<div class="container"><router-outlet></router-outlet></div>',
   styleUrls: ['css/reset.css'],
   providers: []
 })

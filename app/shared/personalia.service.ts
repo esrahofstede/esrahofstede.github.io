@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Headers, Http } from '@angular/http';
+import { Headers, HttpClient } from '@angular/common/http';
 
-import 'rxjs/add/operator/toPromise';
+
 
 import { Personalia } from './personalia';
 

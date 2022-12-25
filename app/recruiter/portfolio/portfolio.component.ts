@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { Portfolio, Company, Project } from './../../shared/portfolio';
-import { PortfolioService } from './../../shared/portfolio.service';
+import { Portfolio, Company, Project } from '../../shared/portfolio';
+import { PortfolioService } from '../../shared/portfolio.service';
 
 @Component({
   selector: 'portfolio',

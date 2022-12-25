@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { Pitch } from './../../shared/pitch';
-import { PitchService } from './../../shared/pitch.service';
+import { Pitch } from '../../shared/pitch';
+import { PitchService } from '../../shared/pitch.service';
 
 @Component({
   selector: 'pitch',

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { Personalia } from './../../shared/personalia';
-import { PersonaliaService } from './../../shared/personalia.service';
+import { Personalia } from '../../shared/personalia';
+import { PersonaliaService } from '../../shared/personalia.service';
 
 @Component({
   selector: 'personalia',
